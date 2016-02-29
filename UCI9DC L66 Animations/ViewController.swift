@@ -30,5 +30,15 @@ class ViewController: UIViewController {
         alienImageView.image = UIImage(named: "frame\(imageNumber).png")
     }
 
+    override func viewDidLayoutSubviews() {
+        alienImageView.center = CGPoint(x: alienImageView.center.x - 400, y: alienImageView.center.y)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(1.0) { () -> Void in
+            self.alienImageView.center = CGPoint(x: self.alienImageView.center.x + 400, y: self.alienImageView.center.y)
+        }
+    }
+
 }
 
