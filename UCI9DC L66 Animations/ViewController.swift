@@ -31,12 +31,12 @@ class ViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        alienImageView.alpha = 0
+        alienImageView.frame = CGRect(x: 100, y: 20, width: 0, height: 0)
     }
 
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(1.0) { () -> Void in
-            self.alienImageView.alpha = 1
+            self.alienImageView.frame = CGRect(x: 100, y: 20, width: 100, height: 200)
         }
     }
 
