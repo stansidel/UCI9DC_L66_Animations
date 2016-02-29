@@ -31,12 +31,12 @@ class ViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        alienImageView.center = CGPoint(x: alienImageView.center.x - 400, y: alienImageView.center.y)
+        alienImageView.alpha = 0
     }
 
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(1.0) { () -> Void in
-            self.alienImageView.center = CGPoint(x: self.alienImageView.center.x + 400, y: self.alienImageView.center.y)
+            self.alienImageView.alpha = 1
         }
     }
 
